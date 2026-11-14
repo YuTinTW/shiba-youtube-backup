@@ -1,0 +1,33 @@
+{
+  "reviewed_at": "2026-11-15",
+  "target_platform": "macOS arm64",
+  "tools": {
+    "deno": {
+      "version": "2.9.8",
+      "arch": "arm64",
+      "license": "MIT",
+      "source_url": "https://github.com/denoland/deno/releases/latest/download/deno-aarch64-apple-darwin.zip",
+      "license_url": "https://github.com/denoland/deno/blob/main/LICENSE.md",
+      "sha256": "d1e99265e5e6ee096c5780d88ff7d3e6cfdf33b1953a118b4889cab8ca6980ba",
+      "dynamic_dependencies": "system libraries only (/usr/lib/*)"
+    },
+    "ffmpeg": {
+      "version": "9.0.2",
+      "arch": "arm64",
+      "license": "GPL-3.0-or-later (nonfree not enabled; includes x264/x265 static build)",
+      "source_url": "https://ffmpeg.martin-riedl.de/redirect/latest/macos/arm64/release/ffmpeg.zip",
+      "corresponding_source_url": "https://ffmpeg.org/download.html",
+      "sha256": "2e11c6f90993cdb79fff84d3f90044d28316b310e75b3e030cfc9a54f2c9d384",
+      "dynamic_dependencies": "macOS system frameworks and /usr/lib/* only"
+    },
+    "ffprobe": {
+      "version": "9.0.2",
+      "arch": "arm64",
+      "license": "GPL-3.0-or-later (nonfree not enabled; includes x264/x265 static build)",
+      "source_url": "https://ffmpeg.martin-riedl.de/redirect/latest/macos/arm64/release/ffprobe.zip",
+      "corresponding_source_url": "https://ffmpeg.org/download.html",
+      "sha256": "2738aa46a7f9acbc8ab09a6715554c90f7de603171ac403726765685df6a0059",
+      "dynamic_dependencies": "macOS system frameworks and /usr/lib/* only"
+    }
+  }
+}

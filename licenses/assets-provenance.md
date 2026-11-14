@@ -1,0 +1,13 @@
+# 素材來源與提示詞
+
+2026-11-14，內建 image_gen 生成。參考 docs/history/design/previews/方案A.png；使用者已選定 C 配置及 A 柴犬。原始生成檔另保留於 Codex generated_images 目錄；專案所需 PNG 已複製至 resources/。
+
+shiba_states.png 提示詞：Create production pixel sprite sheet from reference image: use ONLY the seated orange and cream Shiba with red dotted bandana at lower left, preserve its recognizable proportions, curled tail, triangular ears, dark brown pixel outline and cute calm face. No UI or letters. EXACT 2 columns × 2 rows in a square transparent PNG, each sprite centered with ample equal clear padding in its quadrant. Same body scale and baseline in all four quadrants. TOP LEFT idle: seated waiting, no headphones. TOP RIGHT working: same seated Shiba wearing brown over-ear headphones, alert focused face. BOTTOM LEFT success: happy smiling Shiba, tail held slightly higher. BOTTOM RIGHT error: confused Shiba with head slightly tilted, no symbol or text. Crisp deliberately low-resolution pixel artwork with a consistent pixel grid, solid flat colors and small highlights; no blur, no gradients, no realistic fur. Transparent background, no shadows outside the sprite, no dividers. Four fully isolated sprites that can be cropped by equal quadrants.
+
+app_icon.png 提示詞：Create a finished square macOS application icon for 柴犬存檔室. Use only the A reference Shiba character: seated orange cream Shiba, curled tail to its left, red bandana, brown pixel outlines, no headphones. Center a large recognizable pixel Shiba face and upper body with one small retro orange cassette below it. Warm cream rounded square molded plastic background, subtle tactile edge and deep brown border, extremely restrained green single indicator. Crisp consistent low resolution pixel artwork. No letters, text, extra symbols, scenery, speakers or controls. Strong legibility at 32 pixels, fill canvas with icon shape, generous internal padding, flat front-on view. App icon asset, not a screenshot.
+
+程式執行時由 Tk PhotoImage 擷取 sprite sheet 四個象限，整數取樣，不使用平滑插值。工作動畫以主執行緒 after 排程；完成狀態將尾巴圖層分離位移。這些動畫目前未在可用圖形環境中目視驗證，不宣稱已達到最終像素品質。
+
+圖示透明版的追加提示詞：Preserve this exact application icon, same Shiba, bandana, cassette, color palette and rounded cream plastic panel. Only remove the white area OUTSIDE the rounded square outer brown border, making corners genuinely transparent. Keep all internal cream panel fully opaque. Center with tiny transparent margin. No other changes, no text. Output square RGBA transparent app icon suitable for macOS ICNS.
+
+ICNS 容器格式對照本機 Pillow 的 IcnsImagePlugin.py；格式轉換不複製該實作。參考原始專案：https://github.com/python-pillow/Pillow/blob/main/src/PIL/IcnsImagePlugin.py 。
