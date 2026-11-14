@@ -1,0 +1,1 @@
+已產生 resources/AppIcon.icns

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/xintaitiaozhengdashi/Desktop/youtube 下載app開發/app.py", line 30, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/xintaitiaozhengdashi/Desktop/youtube 下載app開發/app.py", line 24, in main
+    from shiba_studio.gui import run
+  File "/Users/xintaitiaozhengdashi/Desktop/youtube 下載app開發/shiba_studio/gui.py", line 9, in <module>
+    import tkinter as tk
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tkinter/__init__.py", line 38, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+    ^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named '_tkinter'

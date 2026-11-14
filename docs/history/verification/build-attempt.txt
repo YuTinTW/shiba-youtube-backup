@@ -1,0 +1,1 @@
+缺少打包依賴：yt_dlp, yt_dlp_ejs, PyInstaller。請參照 README。

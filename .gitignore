@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+.DS_Store
+tools/
+.runtime-packages/
+.runtime-update.*/
+.runtime-backup.*/
+.runtime-update.lock
+*.log
